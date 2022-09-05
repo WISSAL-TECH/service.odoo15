@@ -3,7 +3,6 @@ services:
 
   odoo:
     image: odoo:15.0
-    build: ./build
     ports:
       - 8069:8069
     container_name: odoo15
