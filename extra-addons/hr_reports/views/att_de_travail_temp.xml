@@ -1,8 +1,0 @@
-<odoo>
-    <template id="report_attestation_de_travail">
-        <t t-call="web.basic_layout">
-            <div class="page">
-            </div>
-        </t>
-    </template>
-</odoo>
