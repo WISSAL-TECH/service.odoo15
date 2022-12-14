@@ -17,15 +17,15 @@ Ajouter les lignes suivante dans votre profile ==.bashrc==
     ```bash
     # Command to fix Odoo Filestore permissions
     function ff() {
-        docker-compose run -u root --rm --no-deps --entrypoint "bash -c \"chown -R odoo: /var/lib/odoo/ && chown `id -u`:`id -g` -R /mnt/extra-addons\"" odoo 
+        docker compose run -u root --rm --no-deps --entrypoint "bash -c \"chown -R odoo: /var/lib/odoo/ && chown `id -u`:`id -g` -R /mnt/extra-addons\"" odoo 
         [ $? -eq 0 ] || echo "Operation failed"
     }
-    # Alias to docker-compose commands
-    alias dcl='docker-compose logs -f --tail=10 '
-    alias dcu='docker-compose up'
-    alias dcd='docker-compose down'
-    alias dcb='docker-compose build'
-    alias dcp='docker-compose pull'
+    # Alias to docker compose commands
+    alias dcl='docker compose logs -f --tail=10 '
+    alias dcu='docker compose up'
+    alias dcd='docker compose down'
+    alias dcb='docker compose build'
+    alias dcp='docker compose pull'
     # Git Aliases
     alias gia='git add .'
     alias gib='git branch -vv'
